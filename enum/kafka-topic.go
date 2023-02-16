@@ -5,5 +5,5 @@ type (
 )
 
 const (
-	CreateUserTopic KafkaTopicName = "create_user"
+	StreamingUserCreateUserJson KafkaTopicName = "streaming_user_create_user_json"
 )

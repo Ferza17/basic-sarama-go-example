@@ -34,7 +34,7 @@ func (d *CreateUser) ParseToProducerMessage(ctx context.Context) (*sarama.Produc
 	}
 
 	msg := &sarama.ProducerMessage{
-		Topic:     string(enum.CreateUserTopic),
+		Topic:     string(enum.StreamingUserCreateUserJson),
 		Key:       sarama.StringEncoder(d.RequestID),
 		Value:     sarama.StringEncoder(value),
 		Offset:    sarama.OffsetNewest,

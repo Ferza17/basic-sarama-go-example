@@ -32,7 +32,7 @@ func (e *Streaming) StartConsumer(ctx context.Context) error {
 
 	// User Consumer
 	errG.Go(func() error {
-		if err := e.UserConsumer.CreateUser(ctx, enum.CreateUserTopic, signals); err != nil {
+		if err := e.UserConsumer.CreateUser(ctx, enum.StreamingUserCreateUserJson, signals); err != nil {
 			return err
 		}
 		return nil
